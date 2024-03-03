@@ -9,4 +9,4 @@ Clone, CompareTo, CopyTo, Equals, GetEnumerator, GetHashType, GetType, GetTypeCo
 Used But No Button:
 ToCharArray, Trim (TrimEnd, TrimStart are not used but are understood), ToString
 
-ToHex() has two check boxes where one adds spaces and the other makes alphabetic characters capital.
+ToHex() has two check boxes where one adds spaces and the other makes alphabetic characters capital. Sometimes these options improve the readablity of hex.

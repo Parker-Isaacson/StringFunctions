@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.txtParams = new System.Windows.Forms.TextBox();
@@ -47,8 +48,11 @@
             this.cmdEndsWith = new System.Windows.Forms.Button();
             this.cmdContains = new System.Windows.Forms.Button();
             this.grbCutsomMethods = new System.Windows.Forms.GroupBox();
+            this.chkUpperCase = new System.Windows.Forms.CheckBox();
+            this.chkAddSpace = new System.Windows.Forms.CheckBox();
             this.cmdToHex = new System.Windows.Forms.Button();
             this.cmdFind = new System.Windows.Forms.Button();
+            this.FamousTooltips = new System.Windows.Forms.ToolTip(this.components);
             this.grbButtons.SuspendLayout();
             this.grbCutsomMethods.SuspendLayout();
             this.SuspendLayout();
@@ -245,14 +249,38 @@
             // 
             // grbCutsomMethods
             // 
+            this.grbCutsomMethods.Controls.Add(this.chkUpperCase);
+            this.grbCutsomMethods.Controls.Add(this.chkAddSpace);
             this.grbCutsomMethods.Controls.Add(this.cmdToHex);
             this.grbCutsomMethods.Controls.Add(this.cmdFind);
             this.grbCutsomMethods.Location = new System.Drawing.Point(13, 180);
             this.grbCutsomMethods.Name = "grbCutsomMethods";
-            this.grbCutsomMethods.Size = new System.Drawing.Size(200, 72);
+            this.grbCutsomMethods.Size = new System.Drawing.Size(278, 93);
             this.grbCutsomMethods.TabIndex = 6;
             this.grbCutsomMethods.TabStop = false;
             this.grbCutsomMethods.Text = "Custom String Methods";
+            // 
+            // chkUpperCase
+            // 
+            this.chkUpperCase.AutoSize = true;
+            this.chkUpperCase.Location = new System.Drawing.Point(149, 56);
+            this.chkUpperCase.Name = "chkUpperCase";
+            this.chkUpperCase.Size = new System.Drawing.Size(120, 24);
+            this.chkUpperCase.TabIndex = 17;
+            this.chkUpperCase.Text = "Upper Case";
+            this.FamousTooltips.SetToolTip(this.chkUpperCase, "Makes the alphabetic hex values upercase");
+            this.chkUpperCase.UseVisualStyleBackColor = true;
+            // 
+            // chkAddSpace
+            // 
+            this.chkAddSpace.AutoSize = true;
+            this.chkAddSpace.Location = new System.Drawing.Point(149, 25);
+            this.chkAddSpace.Name = "chkAddSpace";
+            this.chkAddSpace.Size = new System.Drawing.Size(114, 24);
+            this.chkAddSpace.TabIndex = 16;
+            this.chkAddSpace.Text = "Add Space";
+            this.FamousTooltips.SetToolTip(this.chkAddSpace, "Adds a space between each hex character value");
+            this.chkAddSpace.UseVisualStyleBackColor = true;
             // 
             // cmdToHex
             // 
@@ -288,6 +316,7 @@
             this.Text = "Form1";
             this.grbButtons.ResumeLayout(false);
             this.grbCutsomMethods.ResumeLayout(false);
+            this.grbCutsomMethods.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,6 +345,9 @@
         private System.Windows.Forms.GroupBox grbCutsomMethods;
         private System.Windows.Forms.Button cmdToHex;
         private System.Windows.Forms.Button cmdFind;
+        private System.Windows.Forms.CheckBox chkUpperCase;
+        private System.Windows.Forms.CheckBox chkAddSpace;
+        private System.Windows.Forms.ToolTip FamousTooltips;
     }
 }
 

@@ -502,11 +502,17 @@ namespace StringFunctions
         /// </summary>
         private void ToHex()
         {
+            string Spacer = (chkAddSpace.Checked) ? " " : "";
             char[] input = txtInput.Text.ToCharArray();
             txtOutput.Clear();
             foreach (char hobo in input)
                 if (char.IsLetterOrDigit(hobo))
-                    txtOutput.Text += Convert.ToByte(hobo).ToString("x");
+                {
+                    if (chkUpperCase.Checked)
+                        txtOutput.Text += Spacer + Convert.ToByte(hobo).ToString("x").ToUpper();
+                    else
+                        txtOutput.Text += Spacer + Convert.ToByte(hobo).ToString("x");
+                }                    
         }
         /// <summary>
         /// Outputs The Count And Location Of Given Text. Parameter: "string"

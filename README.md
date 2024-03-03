@@ -8,3 +8,6 @@ Clone, CompareTo, CopyTo, Equals, GetEnumerator, GetHashType, GetType, GetTypeCo
 
 Used But No Button:
 ToCharArray, Trim (TrimEnd, TrimStart are not used but are understood), ToString
+
+In Development:
+Find(), ToHex(), Split

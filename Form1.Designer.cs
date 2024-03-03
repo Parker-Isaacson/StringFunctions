@@ -31,8 +31,10 @@
             this.txtInput = new System.Windows.Forms.TextBox();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.txtParams = new System.Windows.Forms.TextBox();
-            this.cmdTest = new System.Windows.Forms.Button();
             this.grbButtons = new System.Windows.Forms.GroupBox();
+            this.cmdSubstring = new System.Windows.Forms.Button();
+            this.cmdStartsWith = new System.Windows.Forms.Button();
+            this.cmdSplit = new System.Windows.Forms.Button();
             this.cmdReplace = new System.Windows.Forms.Button();
             this.cmdRemove = new System.Windows.Forms.Button();
             this.cmdPadRight = new System.Windows.Forms.Button();
@@ -44,47 +46,39 @@
             this.cmdIndexOf = new System.Windows.Forms.Button();
             this.cmdEndsWith = new System.Windows.Forms.Button();
             this.cmdContains = new System.Windows.Forms.Button();
-            this.cmdSplit = new System.Windows.Forms.Button();
-            this.cmdStartsWith = new System.Windows.Forms.Button();
-            this.cmdSubstring = new System.Windows.Forms.Button();
+            this.grbCutsomMethods = new System.Windows.Forms.GroupBox();
+            this.cmdToHex = new System.Windows.Forms.Button();
+            this.cmdFind = new System.Windows.Forms.Button();
             this.grbButtons.SuspendLayout();
+            this.grbCutsomMethods.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(13, 13);
+            this.txtInput.Location = new System.Drawing.Point(20, 12);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(214, 26);
+            this.txtInput.Size = new System.Drawing.Size(368, 26);
             this.txtInput.TabIndex = 0;
             this.txtInput.Text = "Input";
             // 
             // txtOutput
             // 
-            this.txtOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtOutput.Location = new System.Drawing.Point(12, 388);
+            this.txtOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtOutput.Location = new System.Drawing.Point(12, 361);
             this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(516, 50);
+            this.txtOutput.Size = new System.Drawing.Size(776, 77);
             this.txtOutput.TabIndex = 1;
+            this.txtOutput.Text = "Output";
             // 
             // txtParams
             // 
-            this.txtParams.Location = new System.Drawing.Point(233, 13);
+            this.txtParams.Location = new System.Drawing.Point(420, 12);
             this.txtParams.Name = "txtParams";
-            this.txtParams.Size = new System.Drawing.Size(214, 26);
+            this.txtParams.Size = new System.Drawing.Size(368, 26);
             this.txtParams.TabIndex = 2;
             this.txtParams.Text = "Parameters";
-            // 
-            // cmdTest
-            // 
-            this.cmdTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdTest.Location = new System.Drawing.Point(699, 398);
-            this.cmdTest.Name = "cmdTest";
-            this.cmdTest.Size = new System.Drawing.Size(89, 40);
-            this.cmdTest.TabIndex = 4;
-            this.cmdTest.Text = "Test";
-            this.cmdTest.UseVisualStyleBackColor = true;
-            this.cmdTest.Click += new System.EventHandler(this.cmdTest_Click);
             // 
             // grbButtons
             // 
@@ -104,10 +98,40 @@
             this.grbButtons.Controls.Add(this.cmdContains);
             this.grbButtons.Location = new System.Drawing.Point(13, 46);
             this.grbButtons.Name = "grbButtons";
-            this.grbButtons.Size = new System.Drawing.Size(775, 336);
+            this.grbButtons.Size = new System.Drawing.Size(775, 127);
             this.grbButtons.TabIndex = 5;
             this.grbButtons.TabStop = false;
-            this.grbButtons.Text = "Buttons";
+            this.grbButtons.Text = "String Method";
+            // 
+            // cmdSubstring
+            // 
+            this.cmdSubstring.Location = new System.Drawing.Point(562, 72);
+            this.cmdSubstring.Name = "cmdSubstring";
+            this.cmdSubstring.Size = new System.Drawing.Size(90, 40);
+            this.cmdSubstring.TabIndex = 13;
+            this.cmdSubstring.Text = "Substring";
+            this.cmdSubstring.UseVisualStyleBackColor = true;
+            this.cmdSubstring.Click += new System.EventHandler(this.cmdSubstring_Click);
+            // 
+            // cmdStartsWith
+            // 
+            this.cmdStartsWith.Location = new System.Drawing.Point(446, 72);
+            this.cmdStartsWith.Name = "cmdStartsWith";
+            this.cmdStartsWith.Size = new System.Drawing.Size(110, 40);
+            this.cmdStartsWith.TabIndex = 12;
+            this.cmdStartsWith.Text = "StartsWith";
+            this.cmdStartsWith.UseVisualStyleBackColor = true;
+            this.cmdStartsWith.Click += new System.EventHandler(this.cmdStartsWith_Click);
+            // 
+            // cmdSplit
+            // 
+            this.cmdSplit.Location = new System.Drawing.Point(380, 72);
+            this.cmdSplit.Name = "cmdSplit";
+            this.cmdSplit.Size = new System.Drawing.Size(60, 40);
+            this.cmdSplit.TabIndex = 11;
+            this.cmdSplit.Text = "Split";
+            this.cmdSplit.UseVisualStyleBackColor = true;
+            this.cmdSplit.Click += new System.EventHandler(this.cmdSplit_Click);
             // 
             // cmdReplace
             // 
@@ -219,49 +243,51 @@
             this.cmdContains.UseVisualStyleBackColor = true;
             this.cmdContains.Click += new System.EventHandler(this.cmdContains_Click);
             // 
-            // cmdSplit
+            // grbCutsomMethods
             // 
-            this.cmdSplit.Location = new System.Drawing.Point(380, 72);
-            this.cmdSplit.Name = "cmdSplit";
-            this.cmdSplit.Size = new System.Drawing.Size(60, 40);
-            this.cmdSplit.TabIndex = 11;
-            this.cmdSplit.Text = "Split";
-            this.cmdSplit.UseVisualStyleBackColor = true;
-            this.cmdSplit.Click += new System.EventHandler(this.cmdSplit_Click);
+            this.grbCutsomMethods.Controls.Add(this.cmdToHex);
+            this.grbCutsomMethods.Controls.Add(this.cmdFind);
+            this.grbCutsomMethods.Location = new System.Drawing.Point(13, 180);
+            this.grbCutsomMethods.Name = "grbCutsomMethods";
+            this.grbCutsomMethods.Size = new System.Drawing.Size(200, 72);
+            this.grbCutsomMethods.TabIndex = 6;
+            this.grbCutsomMethods.TabStop = false;
+            this.grbCutsomMethods.Text = "Custom String Methods";
             // 
-            // cmdStartsWith
+            // cmdToHex
             // 
-            this.cmdStartsWith.Location = new System.Drawing.Point(446, 72);
-            this.cmdStartsWith.Name = "cmdStartsWith";
-            this.cmdStartsWith.Size = new System.Drawing.Size(110, 40);
-            this.cmdStartsWith.TabIndex = 12;
-            this.cmdStartsWith.Text = "StartsWith";
-            this.cmdStartsWith.UseVisualStyleBackColor = true;
-            this.cmdStartsWith.Click += new System.EventHandler(this.cmdStartsWith_Click);
+            this.cmdToHex.Location = new System.Drawing.Point(72, 25);
+            this.cmdToHex.Name = "cmdToHex";
+            this.cmdToHex.Size = new System.Drawing.Size(70, 40);
+            this.cmdToHex.TabIndex = 15;
+            this.cmdToHex.Text = "ToHex";
+            this.cmdToHex.UseVisualStyleBackColor = true;
+            this.cmdToHex.Click += new System.EventHandler(this.cmdToHex_Click);
             // 
-            // cmdSubstring
+            // cmdFind
             // 
-            this.cmdSubstring.Location = new System.Drawing.Point(562, 72);
-            this.cmdSubstring.Name = "cmdSubstring";
-            this.cmdSubstring.Size = new System.Drawing.Size(90, 40);
-            this.cmdSubstring.TabIndex = 13;
-            this.cmdSubstring.Text = "Substring";
-            this.cmdSubstring.UseVisualStyleBackColor = true;
-            this.cmdSubstring.Click += new System.EventHandler(this.cmdSubstring_Click);
+            this.cmdFind.Location = new System.Drawing.Point(6, 25);
+            this.cmdFind.Name = "cmdFind";
+            this.cmdFind.Size = new System.Drawing.Size(60, 40);
+            this.cmdFind.TabIndex = 14;
+            this.cmdFind.Text = "Find";
+            this.cmdFind.UseVisualStyleBackColor = true;
+            this.cmdFind.Click += new System.EventHandler(this.cmdFind_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.grbCutsomMethods);
             this.Controls.Add(this.grbButtons);
-            this.Controls.Add(this.cmdTest);
             this.Controls.Add(this.txtParams);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.txtInput);
             this.Name = "Form1";
             this.Text = "Form1";
             this.grbButtons.ResumeLayout(false);
+            this.grbCutsomMethods.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +298,6 @@
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.TextBox txtParams;
-        private System.Windows.Forms.Button cmdTest;
         private System.Windows.Forms.GroupBox grbButtons;
         private System.Windows.Forms.Button cmdContains;
         private System.Windows.Forms.Button cmdEndsWith;
@@ -288,6 +313,9 @@
         private System.Windows.Forms.Button cmdSplit;
         private System.Windows.Forms.Button cmdStartsWith;
         private System.Windows.Forms.Button cmdSubstring;
+        private System.Windows.Forms.GroupBox grbCutsomMethods;
+        private System.Windows.Forms.Button cmdToHex;
+        private System.Windows.Forms.Button cmdFind;
     }
 }
 

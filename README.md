@@ -10,4 +10,5 @@ Used But No Button:
 ToCharArray, Trim (TrimEnd, TrimStart are not used but are understood), ToString
 
 In Development:
-Find(), ToHex(), Split
+Split, Find(), ToHex()
+Checking if Negative Int Values exist
